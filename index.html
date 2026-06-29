@@ -61,6 +61,44 @@
     grid-template-columns:1fr;
   }
 }
+.model-matrix{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:34px;
+}
+
+.model-card{
+  text-align:left;
+  padding:24px;
+  border:1px solid #e2e8f0;
+  border-radius:24px;
+  background:linear-gradient(180deg,#ffffff,#f8fafc);
+  box-shadow:0 18px 55px rgba(15,23,42,.06);
+}
+
+.model-card b{
+  display:block;
+  font-size:20px;
+  margin-bottom:16px;
+}
+
+.model-card span{
+  display:inline-block;
+  margin:6px 6px 0 0;
+  padding:8px 12px;
+  border-radius:999px;
+  background:#eef2ff;
+  color:#4f46e5;
+  font-weight:800;
+  font-size:14px;
+}
+
+@media(max-width:960px){
+  .model-matrix{
+    grid-template-columns:1fr;
+  }
+}
   </style>
 </head>
 <body>
@@ -170,19 +208,57 @@
 </section>
 
 <section id="models" class="section">
-  <h2>支持模型</h2>
-  <p>模型持续更新，更多模型陆续上线。</p>
-  <div class="models">
-    <span>GPT-4.1</span>
-    <span>GPT-4.1-mini</span>
-    <span>GPT-4o</span>
-    <span>GPT-4o-mini</span>
-    <span>o4-mini</span>
-    <span>Claude</span>
-    <span>Gemini</span>
-    <span>DeepSeek</span>
-    <span>Qwen</span>
-    <span>Embedding</span>
+  <h2>支持主流 AI 模型</h2>
+  <p>统一接入多家模型供应商，模型持续更新，适合不同场景调用。</p>
+
+  <div class="model-matrix">
+    <div class="model-card">
+      <b>OpenAI</b>
+      <span>GPT-4.1</span>
+      <span>GPT-4.1-mini</span>
+      <span>GPT-4o</span>
+      <span>GPT-4o-mini</span>
+    </div>
+
+    <div class="model-card">
+      <b>Anthropic</b>
+      <span>Claude Sonnet</span>
+      <span>Claude Opus</span>
+      <span>Claude Haiku</span>
+      <span>Claude 3.5</span>
+    </div>
+
+    <div class="model-card">
+      <b>Google</b>
+      <span>Gemini 2.5 Pro</span>
+      <span>Gemini Flash</span>
+      <span>Gemini Pro</span>
+      <span>Embedding</span>
+    </div>
+
+    <div class="model-card">
+      <b>国产模型</b>
+      <span>DeepSeek R1</span>
+      <span>DeepSeek V3</span>
+      <span>Qwen3</span>
+      <span>Moonshot</span>
+    </div>
+
+    <div class="model-card">
+      <b>开源模型</b>
+      <span>Llama</span>
+      <span>Mistral</span>
+      <span>Mixtral</span>
+      <span>GLM</span>
+    </div>
+
+    <div class="model-card">
+      <b>多模态</b>
+      <span>Vision</span>
+      <span>Whisper</span>
+      <span>TTS</span>
+      <span>Embedding</span>
+    </div>
   </div>
 </section>
 
