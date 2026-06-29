@@ -99,6 +99,33 @@
     grid-template-columns:1fr;
   }
 }
+.hero-stats{
+  display:flex;
+  gap:18px;
+  margin-top:36px;
+  flex-wrap:wrap;
+}
+.hero-stat{
+  background:#fff;
+  padding:20px 28px;
+  border-radius:18px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 12px 40px rgba(0,0,0,.05);
+  text-align:center;
+  min-width:150px;
+}
+.hero-stat h3{
+  margin:0;
+  font-size:30px;
+  color:#4f46e5;
+  font-weight:800;
+}
+.hero-stat span{
+  display:block;
+  margin-top:8px;
+  color:#64748b;
+  font-size:14px;
+}
   </style>
 </head>
 <body>
@@ -135,6 +162,24 @@
             <a class="btn btn-ghost" href="https://fh13290700921-png.github.io/lumiapi-docs/" target="_blank">📖 API 文档</a>
             <a class="btn btn-outline" href="#">🟢 服务状态</a>
           </div>
+          <div class="hero-stats">
+      <div class="hero-stat">
+          <h3>99.99%</h3>
+          <span>API 在线率</span>
+      </div>
+      <div class="hero-stat">
+          <h3>0.42s</h3>
+          <span>平均延迟</span>
+      </div>
+      <div class="hero-stat">
+          <h3>128+</h3>
+          <span>支持模型</span>
+      </div>
+      <div class="hero-stat">
+          <h3>12</h3>
+          <span>全球节点</span>
+      </div>
+  </div>
           <div class="trust">
             <span>支持 OpenAI</span>
             <span>支持 Claude</span>
