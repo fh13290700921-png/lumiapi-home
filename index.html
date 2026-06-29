@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumi API - 统一 AI API 平台</title>
+  <meta name="description" content="Lumi API 是稳定、高速、兼容 OpenAI 的 AI 接口平台，支持 GPT-4.1、GPT-4o、Embedding 等模型。" />
+  <link rel="icon" href="https://raw.githubusercontent.com/fh13290700921-png/lumi-assets/main/favicon.ico" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#">
+      <img src="https://raw.githubusercontent.com/fh13290700921-png/lumi-assets/main/logo.png" alt="Lumi API Logo" />
+      <span>Lumi API</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">优势</a>
+      <a href="#models">模型</a>
+      <a href="#quickstart">接入</a>
+      <a href="#pricing">价格</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="https://api.lumiapi.xyz/login">登录</a>
+      <a class="btn btn-primary" href="https://api.lumiapi.xyz/register">免费注册</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge">OpenAI Compatible · Fast · Stable</div>
+        <h1>统一 AI API 平台<br><span>为开发者而生</span></h1>
+        <p>
+          Lumi API 提供稳定、高速、兼容 OpenAI 的模型接口。支持 GPT-4.1、GPT-4o、Embedding 等模型，
+          适合开发者、自动化工具、AI 应用和团队项目快速接入。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-large" href="https://api.lumiapi.xyz/register">免费注册</a>
+          <a class="btn btn-ghost btn-large" href="#quickstart">查看接入方式</a>
+        </div>
+        <div class="trust">
+          <span>注册送体验额度</span>
+          <span>按量计费</span>
+          <span>兼容 OpenAI SDK</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="glow"></div>
+        <img class="hero-logo" src="https://raw.githubusercontent.com/fh13290700921-png/lumi-assets/main/logo.png" alt="Lumi API" />
+        <div class="float-card card-a">GPT-4.1</div>
+        <div class="float-card card-b">GPT-4o</div>
+        <div class="float-card card-c">Embedding</div>
+        <div class="float-card card-d">o4-mini</div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>99.9%</strong><span>稳定可用</span></div>
+      <div><strong>OpenAI</strong><span>格式兼容</span></div>
+      <div><strong>24/7</strong><span>持续服务</span></div>
+      <div><strong>API Key</strong><span>独立管理</span></div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-head">
+        <h2>为什么选择 Lumi API</h2>
+        <p>面向开发者和小团队的 AI API 接入服务。</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card"><span>⚡</span><h3>高速稳定</h3><p>优质线路接入，适合开发、自动化和 AI 应用调用。</p></div>
+        <div class="feature-card"><span>🔌</span><h3>OpenAI 兼容</h3><p>替换 Base URL 即可使用，兼容 OpenAI SDK 和常见客户端。</p></div>
+        <div class="feature-card"><span>💰</span><h3>按量计费</h3><p>按实际使用消耗额度，适合个人开发者和小团队。</p></div>
+        <div class="feature-card"><span>🛡️</span><h3>安全可靠</h3><p>支持用户令牌、额度、日志和模型权限管理。</p></div>
+      </div>
+    </section>
+
+    <section id="models" class="section">
+      <div class="section-head">
+        <h2>支持模型</h2>
+        <p>模型持续更新，更多模型陆续上线。</p>
+      </div>
+      <div class="model-list">
+        <span>GPT-4.1</span>
+        <span>GPT-4.1-mini</span>
+        <span>GPT-4o</span>
+        <span>GPT-4o-mini</span>
+        <span>o4-mini</span>
+        <span>text-embedding-3-small</span>
+        <span>text-embedding-3-large</span>
+        <span>Whisper</span>
+      </div>
+    </section>
+
+    <section id="quickstart" class="section split">
+      <div>
+        <div class="section-head left">
+          <h2>快速接入</h2>
+          <p>只需替换 Base URL，即可使用兼容 OpenAI 的接口。</p>
+        </div>
+        <div class="endpoint">
+          <div>
+            <span>Base URL</span>
+            <code>https://api.lumiapi.xyz/v1</code>
+          </div>
+          <button onclick="copyText('https://api.lumiapi.xyz/v1')">复制</button>
+        </div>
+      </div>
+      <pre><code>from openai import OpenAI
+
+client = OpenAI(
+    api_key="你的 Lumi API Key",
+    base_url="https://api.lumiapi.xyz/v1"
+)
+
+response = client.chat.completions.create(
+    model="gpt-4.1-mini",
+    messages=[
+        {"role": "user", "content": "Hello Lumi API"}
+    ]
+)
+
+print(response.choices[0].message.content)</code></pre>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="section-head">
+        <h2>简单透明的价格</h2>
+        <p>按量计费，用多少付多少。具体价格以控制台显示为准。</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>体验用户</h3>
+          <strong>注册送额度</strong>
+          <p>适合新用户测试接口和客户端接入。</p>
+          <a href="https://api.lumiapi.xyz/register">立即注册</a>
+        </div>
+        <div class="price-card featured">
+          <h3>开发者</h3>
+          <strong>按量充值</strong>
+          <p>适合个人项目、脚本、工具和小型 AI 应用。</p>
+          <a href="https://api.lumiapi.xyz/login">进入控制台</a>
+        </div>
+        <div class="price-card">
+          <h3>团队/企业</h3>
+          <strong>联系支持</strong>
+          <p>适合更高额度、更稳定和更长期的使用场景。</p>
+          <a href="https://api.lumiapi.xyz/login">联系我们</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="section-head">
+        <h2>常见问题</h2>
+      </div>
+      <div class="faq">
+        <details><summary>如何获取 API Key？</summary><p>注册并登录控制台，进入令牌管理页面创建 API Key。</p></details>
+        <details><summary>是否兼容 OpenAI SDK？</summary><p>兼容，只需要把 base_url 修改为 https://api.lumiapi.xyz/v1。</p></details>
+        <details><summary>支持哪些客户端？</summary><p>支持 Cherry Studio、Cursor、Cline、Open WebUI 等兼容 OpenAI 的客户端。</p></details>
+        <details><summary>如何充值？</summary><p>支付功能上线后，可在钱包管理页面充值。</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <img src="https://raw.githubusercontent.com/fh13290700921-png/lumi-assets/main/logo.png" alt="Lumi API" />
+      <div>
+        <strong>Lumi API</strong>
+        <p>稳定、高速、兼容 OpenAI 的 AI 接口平台。</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="https://api.lumiapi.xyz/login">登录</a>
+      <a href="https://api.lumiapi.xyz/register">注册</a>
+      <a href="https://api.lumiapi.xyz">控制台</a>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
