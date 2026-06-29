@@ -127,6 +127,105 @@
   color:#64748b;
   font-size:14px;
 }
+.pricing-v2{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-top:36px;
+}
+
+.price-v2{
+  position:relative;
+  text-align:left;
+  padding:30px;
+  border:1px solid #e2e8f0;
+  border-radius:28px;
+  background:linear-gradient(180deg,#fff,#f8fafc);
+  box-shadow:0 22px 70px rgba(15,23,42,.07);
+}
+
+.price-v2.hot{
+  border:2px solid #7c3aed;
+  box-shadow:0 26px 90px rgba(124,58,237,.18);
+  transform:translateY(-8px);
+}
+
+.price-tag{
+  display:inline-block;
+  padding:7px 12px;
+  border-radius:999px;
+  background:#eef2ff;
+  color:#4f46e5;
+  font-weight:900;
+  font-size:14px;
+}
+
+.recommend{
+  position:absolute;
+  top:20px;
+  right:20px;
+  padding:7px 12px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  color:#fff;
+  font-weight:900;
+  font-size:13px;
+}
+
+.price-v2 h3{
+  margin:18px 0 12px;
+  font-size:30px;
+}
+
+.price-desc{
+  color:#64748b;
+  line-height:1.7;
+  min-height:58px;
+}
+
+.price-v2 ul{
+  list-style:none;
+  padding:0;
+  margin:22px 0;
+}
+
+.price-v2 li{
+  margin:12px 0;
+  color:#334155;
+  font-weight:700;
+}
+
+.price-v2 li::before{
+  content:"✓";
+  color:#2563eb;
+  margin-right:8px;
+  font-weight:900;
+}
+
+.price-v2 a{
+  display:inline-flex;
+  justify-content:center;
+  width:100%;
+  padding:14px 18px;
+  border-radius:14px;
+  background:#0f172a;
+  color:#fff;
+  font-weight:900;
+}
+
+.price-v2.hot a{
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+}
+
+@media(max-width:960px){
+  .pricing-v2{
+    grid-template-columns:1fr;
+  }
+
+  .price-v2.hot{
+    transform:none;
+  }
+}
   </style>
 </head>
 <body>
@@ -339,28 +438,55 @@ print(response.choices[0].message.content)</code></pre> </section>
 <section id="pricing" class="section">
   <h2>简单透明的价格</h2>
   <p>按量计费，用多少付多少。具体价格以控制台显示为准。</p>
-  <div class="pricing">
-    <div class="price">
-      <h3>体验用户</h3>
-      <strong>免费体验</strong>
-      <p>适合新用户测试接口和客户端接入。</p>
+
+  <div class="pricing-v2">
+    <div class="price-v2">
+      <div class="price-tag">体验</div>
+      <h3>免费体验</h3>
+      <p class="price-desc">适合新用户测试接口、客户端接入和基础功能体验。</p>
+
+      <ul>
+        <li>注册送体验额度</li>
+        <li>支持常用模型测试</li>
+        <li>兼容 OpenAI SDK</li>
+        <li>可创建 API Key</li>
+      </ul>
+
       <a href="https://api.lumiapi.xyz/register">立即注册</a>
     </div>
-    <div class="price hot">
-      <h3>开发者</h3>
-      <strong>按量充值</strong>
-      <p>适合个人项目、脚本、工具和小型 AI 应用。</p>
+
+    <div class="price-v2 hot">
+      <div class="recommend">推荐</div>
+      <div class="price-tag">开发者</div>
+      <h3>按量充值</h3>
+      <p class="price-desc">适合个人开发者、自动化脚本、AI 工具和小型项目。</p>
+
+      <ul>
+        <li>按实际 Token 消耗计费</li>
+        <li>支持 GPT、Claude、Gemini 等模型</li>
+        <li>支持使用日志查询</li>
+        <li>适合长期稳定调用</li>
+      </ul>
+
       <a href="https://api.lumiapi.xyz/login">进入控制台</a>
     </div>
-    <div class="price">
+
+    <div class="price-v2">
+      <div class="price-tag">团队</div>
       <h3>团队/企业</h3>
-      <strong>联系支持</strong>
-      <p>适合更高额度、更稳定和更长期的使用场景。</p>
-      <a href="https://api.lumiapi.xyz/login">联系我们</a>
+      <p class="price-desc">适合团队项目、更高额度、更稳定和更长期的使用场景。</p>
+
+      <ul>
+        <li>更高额度支持</li>
+        <li>多模型统一接入</li>
+        <li>可按需配置模型权限</li>
+        <li>适合业务系统集成</li>
+      </ul>
+
+      <a href="https://api.lumiapi.xyz/login">联系支持</a>
     </div>
   </div>
 </section>
-
 <section id="faq" class="section">
   <h2>常见问题</h2>
   <p>使用前你可能会关心这些问题。</p>
