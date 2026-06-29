@@ -271,7 +271,46 @@ line-height:1.7;
 .adv-grid{
 grid-template-columns:1fr;
 }
-}    
+}
+.logo-wall{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin-top:46px;
+}
+
+.logo-item{
+  padding:22px;
+  border-radius:22px;
+  background:rgba(255,255,255,.88);
+  border:1px solid #e2e8f0;
+  box-shadow:0 16px 45px rgba(15,23,42,.06);
+  text-align:left;
+  transition:.25s;
+}
+
+.logo-item:hover{
+  transform:translateY(-6px);
+  box-shadow:0 24px 70px rgba(99,102,241,.16);
+}
+
+.logo-item strong{
+  display:block;
+  font-size:22px;
+  margin-bottom:8px;
+}
+
+.logo-item span{
+  color:#64748b;
+  font-weight:700;
+  font-size:14px;
+}
+
+@media(max-width:960px){
+  .logo-wall{
+    grid-template-columns:1fr;
+  }
+}
   </style>
 </head>
 <body>
@@ -368,15 +407,15 @@ grid-template-columns:1fr;
       <p>独立令牌与额度控制</p>
     </div>
   </div>
-  <div class="providers">
-    <span>OpenAI</span>
-    <span>Claude</span>
-    <span>Gemini</span>
-    <span>DeepSeek</span>
-    <span>Qwen</span>
-    <span>Grok</span>
-    <span>Embedding</span>
-    <span>Whisper</span>
+  <div class="logo-wall">
+    <div class="logo-item"><strong>OpenAI</strong><span>GPT-4.1 / GPT-4o</span></div>
+    <div class="logo-item"><strong>Claude</strong><span>Sonnet / Opus</span></div>
+    <div class="logo-item"><strong>Gemini</strong><span>2.5 Pro / Flash</span></div>
+    <div class="logo-item"><strong>DeepSeek</strong><span>R1 / V3</span></div>
+    <div class="logo-item"><strong>Qwen</strong><span>Qwen3 / Plus</span></div>
+    <div class="logo-item"><strong>Grok</strong><span>xAI Models</span></div>
+    <div class="logo-item"><strong>Llama</strong><span>Open Models</span></div>
+    <div class="logo-item"><strong>Embedding</strong><span>Vector Models</span></div>
   </div>
 </section>
 
