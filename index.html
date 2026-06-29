@@ -311,6 +311,46 @@ grid-template-columns:1fr;
     grid-template-columns:1fr;
   }
 }
+.footer-pro{
+  padding:80px 8% 40px;
+  background:#0f172a;
+  color:#fff;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:40px;
+  margin-bottom:40px;
+}
+
+.footer-grid a{
+  color:#cbd5e1;
+  text-decoration:none;
+  line-height:2;
+}
+
+.footer-grid a:hover{
+  color:#fff;
+}
+
+.footer-bottom{
+  border-top:1px solid #1e293b;
+  padding-top:20px;
+  text-align:center;
+  color:#94a3b8;
+  font-size:13px;
+}
+
+.footer-grid h3, .footer-grid h4{
+  margin-bottom:12px;
+}
+
+@media(max-width:900px){
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+}
   </style>
 </head>
 <body>
@@ -641,22 +681,39 @@ print(response.choices[0].message.content)</code></pre> </section>
 ```
 
   </main>
+<footer class="footer-pro">
+  <div class="footer-grid">
 
-  <footer>
-    <div class="footer-brand">
-      <img src="https://raw.githubusercontent.com/fh13290700921-png/lumi-assets/main/logo.png" alt="Lumi API" />
-      <div>
-        <strong>Lumi API</strong>
-        <p>稳定、高速、兼容 OpenAI 的 AI 接口平台。</p>
-      </div>
+    <div>
+      <h3>Lumi API</h3>
+      <p>统一 AI API 平台，兼容 OpenAI / Claude / Gemini 等模型。</p>
     </div>
-    <div class="footer-links">
-      <a href="https://api.lumiapi.xyz/login">登录</a>
-      <a href="https://api.lumiapi.xyz/register">注册</a>
-      <a href="https://api.lumiapi.xyz">控制台</a>
-    </div>
-  </footer>
 
+    <div>
+      <h4>产品</h4>
+      <a href="#">首页</a><br>
+      <a href="#">开发文档</a><br>
+      <a href="#">价格</a>
+    </div>
+
+    <div>
+      <h4>开发者</h4>
+      <a href="https://api.lumiapi.xyz/docs">API Docs</a><br>
+      <a href="#">状态页面</a><br>
+      <a href="#">SDK</a>
+    </div>
+
+    <div>
+      <h4>联系</h4>
+      <p>support@lumiapi.xyz</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Lumi API. All rights reserved.
+  </div>
+</footer>
   <script>
     function copyText(text){
       if(navigator.clipboard){
