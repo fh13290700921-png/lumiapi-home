@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lumi API - 统一 AI API 平台</title>
-  <meta name="description" content="Lumi API 是稳定、高速、兼容 OpenAI 的 AI 接口平台，支持 GPT-4.1、GPT-4o、Embedding 等模型。" />
+  <title>Lumi API - 一站式 AI 模型接口平台</title>
+  <meta name="description" content="Lumi API 是稳定、高速、兼容 OpenAI 的一站式 AI 模型接口平台。" />
   <link rel="icon" href="https://raw.githubusercontent.com/fh13290700921-png/lumi-assets/main/favicon.ico" />
   <style>
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;color:#0f172a;background:#fff}a{text-decoration:none;color:inherit}.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px 8%;background:rgba(255,255,255,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(226,232,240,.85)}.brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:900}.brand img{width:38px;height:38px;object-fit:contain}.nav-links{display:flex;gap:26px;color:#475569;font-weight:700}.nav-links a:hover{color:#2563eb}.nav-actions{display:flex;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:10px 18px;font-weight:800;transition:.2s}.btn:hover{transform:translateY(-1px)}.btn-primary{background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;box-shadow:0 14px 32px rgba(37,99,235,.25)}.btn-ghost{background:#f1f5f9;color:#0f172a}.btn-large{padding:15px 26px;font-size:16px}.hero{position:relative;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:52px;min-height:680px;padding:92px 8% 60px;overflow:hidden;background:radial-gradient(circle at 76% 22%,rgba(124,58,237,.24),transparent 35%),radial-gradient(circle at 12% 14%,rgba(37,99,235,.15),transparent 32%),linear-gradient(180deg,#f8faff,#fff)}.badge{display:inline-block;padding:8px 15px;border-radius:999px;background:#eef2ff;color:#4f46e5;font-weight:900;margin-bottom:22px}.hero h1{margin:0 0 24px;font-size:72px;line-height:1.05;letter-spacing:-2.5px}.hero h1 span{background:linear-gradient(135deg,#2563eb,#7c3aed);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:720px;color:#64748b;font-size:20px;line-height:1.85;margin:0}.hero-actions{display:flex;gap:16px;margin:34px 0 24px;flex-wrap:wrap}.trust{display:flex;gap:18px;flex-wrap:wrap;color:#64748b;font-weight:700}.trust span:before{content:"✓";margin-right:7px;color:#2563eb}.hero-visual{position:relative;height:430px;border-radius:36px;background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(238,242,255,.78));border:1px solid #e2e8f0;box-shadow:0 35px 90px rgba(99,102,241,.22);display:flex;align-items:center;justify-content:center;overflow:hidden}.glow{position:absolute;width:300px;height:300px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#7c3aed);filter:blur(54px);opacity:.34}.hero-logo{position:relative;z-index:2;width:330px;max-width:78%}.float-card{position:absolute;z-index:4;background:rgba(255,255,255,.82);border:1px solid #e2e8f0;border-radius:16px;padding:14px 18px;font-weight:900;box-shadow:0 18px 40px rgba(15,23,42,.1)}.card-a{top:48px;left:50px}.card-b{top:76px;right:46px}.card-c{bottom:64px;right:44px}.card-d{bottom:86px;left:48px}.stats{margin:0 8%;transform:translateY(25px);display:grid;grid-template-columns:repeat(4,1fr);background:#0f172a;color:#fff;border-radius:22px;overflow:hidden;box-shadow:0 24px 70px rgba(15,23,42,.28)}.stats div{text-align:center;padding:29px;border-right:1px solid rgba(255,255,255,.12)}.stats div:last-child{border-right:0}.stats strong{display:block;font-size:27px}.stats span{color:#cbd5e1}.section{padding:92px 8% 24px;text-align:center}.section-head h2{font-size:40px;margin:0 0 12px;letter-spacing:-.9px}.section-head p{margin:0 auto 36px;color:#64748b;font-size:17px;max-width:660px;line-height:1.7}.section-head.left{text-align:left}.section-head.left p{margin-left:0}.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.feature-card,.price-card{border:1px solid #e2e8f0;border-radius:24px;background:rgba(255,255,255,.92);padding:26px;text-align:left;box-shadow:0 18px 60px rgba(15,23,42,.06)}.feature-card span{font-size:30px}.feature-card h3,.price-card h3{margin:14px 0 8px}.feature-card p,.price-card p{color:#64748b;line-height:1.75}.model-list{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}.model-list span{padding:14px 18px;border-radius:14px;background:#fff;border:1px solid #e2e8f0;font-weight:900;box-shadow:0 12px 32px rgba(15,23,42,.06)}.split{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;text-align:left;align-items:stretch}.endpoint{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:18px;flex-wrap:wrap}.endpoint span{display:block;font-weight:900;margin-bottom:8px}.endpoint code{display:block;background:#eef2ff;color:#4f46e5;padding:10px 12px;border-radius:10px}.endpoint button{border:0;border-radius:10px;padding:11px 15px;background:#2563eb;color:#fff;font-weight:900;cursor:pointer}pre{margin:0;background:#0b1220;color:#dbeafe;border-radius:24px;padding:28px;overflow:auto;line-height:1.7;box-shadow:0 20px 60px rgba(15,23,42,.18)}.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.price-card strong{display:block;font-size:28px;margin:12px 0}.price-card a{display:inline-flex;margin-top:10px;color:#2563eb;font-weight:900}.price-card.featured{border-color:#7c3aed;box-shadow:0 24px 80px rgba(124,58,237,.2)}.faq{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;text-align:left}.faq details{background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:19px}.faq summary{font-weight:900;cursor:pointer}.faq p{color:#64748b;line-height:1.7}footer{margin-top:80px;padding:38px 8%;display:flex;justify-content:space-between;gap:24px;background:#0f172a;color:#fff}.footer-brand{display:flex;align-items:center;gap:14px}.footer-brand img{width:48px;height:48px}.footer-brand p{margin:6px 0 0;color:#94a3b8}.footer-links{display:flex;gap:20px;align-items:center;color:#cbd5e1}@media(max-width:960px){.nav-links{display:none}.hero{grid-template-columns:1fr;padding-top:70px}.hero h1{font-size:50px}.stats,.feature-grid,.pricing-grid,.faq,.split{grid-template-columns:1fr}.stats div{border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}footer{flex-direction:column}.hero-visual{height:320px}.float-card{display:none}}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;color:#0f172a;background:#fff}a{text-decoration:none;color:inherit}.nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:rgba(255,255,255,.78);backdrop-filter:blur(18px);border-bottom:1px solid #e5e7eb}.brand{display:flex;align-items:center;gap:12px;font-size:22px;font-weight:900}.brand img{width:40px;height:40px;object-fit:contain}.nav-links{display:flex;gap:28px;font-weight:800;color:#475569}.nav-links a:hover{color:#2563eb}.nav-actions{display:flex;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;padding:12px 20px;font-weight:900;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn-primary{color:white;background:linear-gradient(135deg,#2563eb,#7c3aed);box-shadow:0 18px 40px rgba(37,99,235,.25)}.btn-ghost{background:#f1f5f9;color:#0f172a}.btn-outline{border:2px solid #6366f1;color:#4f46e5;background:white}.hero{position:relative;overflow:hidden;padding:96px 8% 70px;background:radial-gradient(circle at 78% 18%,rgba(124,58,237,.26),transparent 34%),radial-gradient(circle at 18% 20%,rgba(37,99,235,.18),transparent 30%),linear-gradient(180deg,#f8faff,#fff)}.hero-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}.badge{display:inline-flex;padding:8px 16px;border-radius:999px;background:#eef2ff;color:#4f46e5;font-weight:900;margin-bottom:24px}.hero h1{font-size:74px;line-height:1.05;letter-spacing:-3px;margin:0 0 24px}.hero h1 span{background:linear-gradient(135deg,#2563eb,#7c3aed);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{font-size:20px;line-height:1.85;color:#64748b;max-width:720px;margin:0}.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin:34px 0 24px}.trust{display:flex;gap:18px;flex-wrap:wrap;color:#475569;font-weight:800}.trust span:before{content:"✓";color:#2563eb;margin-right:6px}.visual{position:relative;min-height:440px;border:1px solid #e2e8f0;border-radius:38px;background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(238,242,255,.82));display:flex;align-items:center;justify-content:center;box-shadow:0 36px 90px rgba(99,102,241,.22);overflow:hidden}.visual:before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#7c3aed);filter:blur(56px);opacity:.32}.visual img{position:relative;z-index:2;width:360px;max-width:80%}.tag{position:absolute;z-index:3;padding:13px 18px;border:1px solid #e2e8f0;border-radius:16px;background:rgba(255,255,255,.86);font-weight:900;box-shadow:0 16px 40px rgba(15,23,42,.1)}.t1{top:52px;left:48px}.t2{top:82px;right:48px}.t3{bottom:72px;right:42px}.t4{bottom:86px;left:48px}.providers{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:54px}.providers span{padding:12px 18px;border-radius:999px;background:white;border:1px solid #e2e8f0;font-weight:900;box-shadow:0 12px 30px rgba(15,23,42,.05)}.stats{margin:-28px 8% 0;position:relative;z-index:3;display:grid;grid-template-columns:repeat(4,1fr);background:#0f172a;color:white;border-radius:24px;overflow:hidden;box-shadow:0 26px 80px rgba(15,23,42,.28)}.stats div{text-align:center;padding:30px;border-right:1px solid rgba(255,255,255,.12)}.stats div:last-child{border-right:0}.stats strong{display:block;font-size:30px}.stats span{color:#cbd5e1}.section{padding:96px 8% 20px;text-align:center}.section h2{font-size:42px;margin:0 0 12px;letter-spacing:-1px}.section>p{font-size:18px;color:#64748b;margin:0 auto 38px;max-width:720px;line-height:1.7}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{padding:28px;border:1px solid #e2e8f0;border-radius:24px;background:white;text-align:left;box-shadow:0 18px 60px rgba(15,23,42,.06)}.card .icon{font-size:30px}.card h3{margin:16px 0 10px}.card p{color:#64748b;line-height:1.75}.models{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}.models span{padding:14px 18px;border-radius:15px;border:1px solid #e2e8f0;background:#fff;font-weight:900;box-shadow:0 12px 30px rgba(15,23,42,.05)}.quick{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;text-align:left;align-items:stretch}.endpoint{padding:22px;border:1px solid #e2e8f0;border-radius:22px;background:white}.endpoint b{display:block;margin-bottom:10px}.endpoint code{display:inline-block;background:#eef2ff;color:#4f46e5;padding:12px 14px;border-radius:12px}.endpoint button{margin-left:10px;border:0;border-radius:12px;background:#2563eb;color:white;padding:12px 16px;font-weight:900;cursor:pointer}pre{margin:0;background:#0b1220;color:#dbeafe;border-radius:24px;padding:28px;overflow:auto;line-height:1.7;box-shadow:0 22px 70px rgba(15,23,42,.18)}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.price{padding:30px;border:1px solid #e2e8f0;border-radius:26px;text-align:left;background:#fff;box-shadow:0 20px 70px rgba(15,23,42,.06)}.price.hot{border-color:#7c3aed;box-shadow:0 24px 80px rgba(124,58,237,.18)}.price h3{margin:0 0 14px}.price strong{display:block;font-size:30px;margin-bottom:16px}.price p{color:#64748b;line-height:1.7}.price a{display:inline-block;margin-top:12px;color:#2563eb;font-weight:900}.faq{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;text-align:left}.faq details{border:1px solid #e2e8f0;border-radius:18px;padding:20px;background:#fff}.faq summary{font-weight:900;cursor:pointer}.faq p{color:#64748b;line-height:1.7}.cta{margin:90px 8% 0;padding:54px;border-radius:30px;text-align:center;color:white;background:linear-gradient(135deg,#2563eb,#7c3aed);box-shadow:0 30px 90px rgba(37,99,235,.25)}.cta h2{font-size:40px;margin:0 0 14px}.cta p{color:#e0e7ff;margin-bottom:26px}footer{margin-top:90px;padding:42px 8%;display:flex;justify-content:space-between;gap:24px;background:#0f172a;color:white}.footer-brand{display:flex;gap:14px;align-items:center}.footer-brand img{width:52px;height:52px}.footer-brand p{color:#94a3b8;margin:6px 0 0}.footer-links{display:flex;gap:22px;align-items:center;color:#cbd5e1}@media(max-width:960px){.nav-links{display:none}.hero-wrap,.quick,.stats,.grid,.pricing,.faq{grid-template-columns:1fr}.hero h1{font-size:48px}.visual{min-height:320px}.tag{display:none}.stats div{border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}footer{flex-direction:column}.nav{padding:16px 5%}.section,.hero{padding-left:5%;padding-right:5%}}
   </style>
 </head>
-
 <body>
   <header class="nav">
     <a class="brand" href="#">
@@ -33,94 +32,88 @@
 
   <main>
     <section class="hero">
-        <div class="hero-content">
-        <div class="badge">OpenAI Compatible · Fast · Stable</div>
-        <h1>统一 AI 模型接口平台<br><span>一站式接入主流大模型</span></h1>
-        <p>
-          一个 API，接入 OpenAI、Claude、Gemini、DeepSeek、Qwen、Grok 等主流模型。
-          兼容 OpenAI SDK，适合开发者、自动化工具、AI 应用和团队项目快速接入。
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary btn-large" href="https://api.lumiapi.xyz/register">免费注册</a>
-          <a class="btn btn-ghost btn-large" href="#quickstart">查看接入方式</a>
+      <div class="hero-wrap">
+        <div>
+          <div class="badge">OpenAI Compatible · Fast · Stable</div>
+          <h1>统一 AI 模型接口平台<br><span>一站式接入主流大模型</span></h1>
+          <p>一个 API，接入 OpenAI、Claude、Gemini、DeepSeek、Qwen、Grok 等主流模型。兼容 OpenAI SDK，适合开发者、自动化工具、AI 应用和团队项目快速接入。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://api.lumiapi.xyz/register">🚀 免费注册</a>
+            <a class="btn btn-ghost" href="#quickstart">📖 API 文档</a>
+            <a class="btn btn-outline" href="#">🟢 服务状态</a>
+          </div>
+          <div class="trust">
+            <span>支持 OpenAI</span>
+            <span>支持 Claude</span>
+            <span>支持 Gemini</span>
+            <span>支持 DeepSeek</span>
+          </div>
         </div>
-        <div class="hero-buttons">
-          <a href="/register" class="btn btn-primary">
-              🚀 免费注册
-          </a>
-          <a href="#quickstart" class="btn btn-secondary">
-              📖 API 文档
-          </a>
-          <a href="https://status.lumiapi.xyz" target="_blank" class="btn btn-outline">
-              🟢 服务状态
-          </a>
-        </div>
-        <div class="trust">
-          <span>注册送体验额度</span>
-          <span>按量计费</span>
-          <span>兼容 OpenAI SDK</span>
-        </div>
-      </div>
 
 ```
-  <div class="hero-visual">
-    <div class="glow"></div>
-    <img class="hero-logo" src="https://raw.githubusercontent.com/fh13290700921-png/lumi-assets/main/logo.png" alt="Lumi API" />
-    <div class="float-card card-a">GPT-4.1</div>
-    <div class="float-card card-b">GPT-4o</div>
-    <div class="float-card card-c">Embedding</div>
-    <div class="float-card card-d">o4-mini</div>
+    <div class="visual">
+      <img src="https://raw.githubusercontent.com/fh13290700921-png/lumi-assets/main/logo.png" alt="Lumi API" />
+      <div class="tag t1">GPT-4.1</div>
+      <div class="tag t2">Claude</div>
+      <div class="tag t3">Gemini</div>
+      <div class="tag t4">DeepSeek</div>
+    </div>
+  </div>
+
+  <div class="providers">
+    <span>OpenAI</span>
+    <span>Claude</span>
+    <span>Gemini</span>
+    <span>DeepSeek</span>
+    <span>Qwen</span>
+    <span>Grok</span>
+    <span>Embedding</span>
+    <span>Whisper</span>
   </div>
 </section>
 
 <section class="stats">
+  <div><strong>100+</strong><span>支持模型</span></div>
   <div><strong>99.9%</strong><span>稳定可用</span></div>
   <div><strong>OpenAI</strong><span>格式兼容</span></div>
   <div><strong>24/7</strong><span>持续服务</span></div>
-  <div><strong>API Key</strong><span>独立管理</span></div>
 </section>
 
 <section id="features" class="section">
-  <div class="section-head">
-    <h2>为什么选择 Lumi API</h2>
-    <p>面向开发者和小团队的 AI API 接入服务。</p>
-  </div>
-  <div class="feature-grid">
-    <div class="feature-card"><span>⚡</span><h3>高速稳定</h3><p>优质线路接入，适合开发、自动化和 AI 应用调用。</p></div>
-    <div class="feature-card"><span>🔌</span><h3>OpenAI 兼容</h3><p>替换 Base URL 即可使用，兼容 OpenAI SDK 和常见客户端。</p></div>
-    <div class="feature-card"><span>💰</span><h3>按量计费</h3><p>按实际使用消耗额度，适合个人开发者和小团队。</p></div>
-    <div class="feature-card"><span>🛡️</span><h3>安全可靠</h3><p>支持用户令牌、额度、日志和模型权限管理。</p></div>
+  <h2>为什么选择 Lumi API</h2>
+  <p>面向开发者和小团队的 AI API 接入服务，稳定、简单、可控。</p>
+  <div class="grid">
+    <div class="card"><div class="icon">⚡</div><h3>高速稳定</h3><p>优质线路接入，适合开发、自动化和 AI 应用调用。</p></div>
+    <div class="card"><div class="icon">🔌</div><h3>OpenAI 兼容</h3><p>替换 Base URL 即可使用，兼容 OpenAI SDK 和常见客户端。</p></div>
+    <div class="card"><div class="icon">💰</div><h3>按量计费</h3><p>按实际使用消耗额度，适合个人开发者和小团队。</p></div>
+    <div class="card"><div class="icon">🛡️</div><h3>安全可靠</h3><p>支持用户令牌、额度、日志和模型权限管理。</p></div>
   </div>
 </section>
 
 <section id="models" class="section">
-  <div class="section-head">
-    <h2>支持模型</h2>
-    <p>模型持续更新，更多模型陆续上线。</p>
-  </div>
-  <div class="model-list">
+  <h2>支持模型</h2>
+  <p>模型持续更新，更多模型陆续上线。</p>
+  <div class="models">
     <span>GPT-4.1</span>
     <span>GPT-4.1-mini</span>
     <span>GPT-4o</span>
     <span>GPT-4o-mini</span>
     <span>o4-mini</span>
-    <span>text-embedding-3-small</span>
-    <span>text-embedding-3-large</span>
-    <span>Whisper</span>
+    <span>Claude</span>
+    <span>Gemini</span>
+    <span>DeepSeek</span>
+    <span>Qwen</span>
+    <span>Embedding</span>
   </div>
 </section>
 
-<section id="quickstart" class="section split">
+<section id="quickstart" class="section quick">
   <div>
-    <div class="section-head left">
-      <h2>快速接入</h2>
-      <p>只需替换 Base URL，即可使用兼容 OpenAI 的接口。</p>
-    </div>
+    <h2>快速接入</h2>
+    <p style="color:#64748b;line-height:1.8">只需替换 Base URL，即可使用兼容 OpenAI 的接口。</p>
     <div class="endpoint">
-      <div>
-        <span>Base URL</span>
-        <code>https://api.lumiapi.xyz/v1</code>
-      </div>
+      <b>Base URL</b>
+      <code>https://api.lumiapi.xyz/v1</code>
       <button onclick="copyText('https://api.lumiapi.xyz/v1')">复制</button>
     </div>
   </div>
@@ -143,24 +136,22 @@ print(response.choices[0].message.content)</code></pre> </section>
 
 ```
 <section id="pricing" class="section">
-  <div class="section-head">
-    <h2>简单透明的价格</h2>
-    <p>按量计费，用多少付多少。具体价格以控制台显示为准。</p>
-  </div>
-  <div class="pricing-grid">
-    <div class="price-card">
+  <h2>简单透明的价格</h2>
+  <p>按量计费，用多少付多少。具体价格以控制台显示为准。</p>
+  <div class="pricing">
+    <div class="price">
       <h3>体验用户</h3>
-      <strong>注册送额度</strong>
+      <strong>免费体验</strong>
       <p>适合新用户测试接口和客户端接入。</p>
       <a href="https://api.lumiapi.xyz/register">立即注册</a>
     </div>
-    <div class="price-card featured">
+    <div class="price hot">
       <h3>开发者</h3>
       <strong>按量充值</strong>
       <p>适合个人项目、脚本、工具和小型 AI 应用。</p>
       <a href="https://api.lumiapi.xyz/login">进入控制台</a>
     </div>
-    <div class="price-card">
+    <div class="price">
       <h3>团队/企业</h3>
       <strong>联系支持</strong>
       <p>适合更高额度、更稳定和更长期的使用场景。</p>
@@ -170,15 +161,20 @@ print(response.choices[0].message.content)</code></pre> </section>
 </section>
 
 <section id="faq" class="section">
-  <div class="section-head">
-    <h2>常见问题</h2>
-  </div>
+  <h2>常见问题</h2>
+  <p>使用前你可能会关心这些问题。</p>
   <div class="faq">
     <details><summary>如何获取 API Key？</summary><p>注册并登录控制台，进入令牌管理页面创建 API Key。</p></details>
     <details><summary>是否兼容 OpenAI SDK？</summary><p>兼容，只需要把 base_url 修改为 https://api.lumiapi.xyz/v1。</p></details>
     <details><summary>支持哪些客户端？</summary><p>支持 Cherry Studio、Cursor、Cline、Open WebUI 等兼容 OpenAI 的客户端。</p></details>
     <details><summary>如何充值？</summary><p>支付功能上线后，可在钱包管理页面充值。</p></details>
   </div>
+</section>
+
+<section class="cta">
+  <h2>现在开始使用 Lumi API</h2>
+  <p>几分钟内完成注册、创建 Key，并开始调用主流 AI 模型。</p>
+  <a class="btn btn-ghost" href="https://api.lumiapi.xyz/register">立即免费注册</a>
 </section>
 ```
 
@@ -200,15 +196,11 @@ print(response.choices[0].message.content)</code></pre> </section>
   </footer>
 
   <script>
-    function copyText(text) {
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(text).then(function () {
-          alert("已复制：" + text);
-        }).catch(function () {
-          prompt("复制下面内容：", text);
-        });
-      } else {
-        prompt("复制下面内容：", text);
+    function copyText(text){
+      if(navigator.clipboard){
+        navigator.clipboard.writeText(text).then(function(){alert("已复制："+text)})
+      }else{
+        prompt("复制下面内容：",text)
       }
     }
   </script>
